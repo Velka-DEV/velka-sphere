@@ -12,6 +12,7 @@ const { title, summary, date } = data
 
 const demoUrl = collection === "projects" ? data.demoUrl : null
 const repoUrl = collection === "projects" ? data.repoUrl : null
+const thumbnail = collection === "blog" ? data.thumbnail : null
 ---
 
 <div>
@@ -24,6 +25,11 @@ const repoUrl = collection === "projects" ? data.repoUrl : null
       Back to {collection}
     </div>
   </a>
+  { thumbnail && 
+    <div class="mt-6">
+      <img src={thumbnail.src} alt={title} class="w-full rounded-lg"/>
+    </div>
+  }
   <div class="flex flex-wrap text-sm uppercase mt-12 gap-3 opacity-75">
     <div class="flex items-center gap-2">
       <svg class="size-5 stroke-current">
