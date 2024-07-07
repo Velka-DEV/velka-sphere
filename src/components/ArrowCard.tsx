@@ -7,7 +7,7 @@ type Props = {
 };
 
 export default function ArrowCard({ entry, pill }: Props) {
-  const thumbnail = entry.collection === "blog" ? entry.data.thumbnail : null;
+  const thumbnail = entry.data.thumbnail
 
   return (
     <a

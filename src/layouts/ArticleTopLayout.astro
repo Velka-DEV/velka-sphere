@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content"
 import { formatDate, readingTime } from "@lib/utils"
+import { Image } from 'astro:assets';
 
 type Props = {
   entry: CollectionEntry<"projects"> | CollectionEntry<"blog">
@@ -12,7 +13,7 @@ const { title, summary, date } = data
 
 const demoUrl = collection === "projects" ? data.demoUrl : null
 const repoUrl = collection === "projects" ? data.repoUrl : null
-const thumbnail = collection === "blog" ? data.thumbnail : null
+const thumbnail = data.thumbnail
 ---
 
 <div>
@@ -27,7 +28,7 @@ const thumbnail = collection === "blog" ? data.thumbnail : null
   </a>
   { thumbnail && 
     <div class="mt-6">
-      <img src={thumbnail.src} alt={title} class="w-full rounded-lg"/>
+      <Image src={thumbnail} alt={title} class="w-full rounded-lg"/>
     </div>
   }
   <div class="flex flex-wrap text-sm uppercase mt-12 gap-3 opacity-75">
