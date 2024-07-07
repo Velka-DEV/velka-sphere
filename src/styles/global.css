@@ -149,8 +149,9 @@ article img {
   @apply rotate-315;
 }
 
+
 .mouseDown {
-  font-size: 0.9em; /* CONTROL MOUSE SIZE */
+  font-size: 0.7em; 
   border: 1px solid rgba(255,255,255,1);
   display: block;
   width: 1.7em;
