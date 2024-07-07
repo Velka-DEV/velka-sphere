@@ -66,7 +66,7 @@ const stack = [
   </div>
 
   <script is:inline src="/js/bg.js"></script>
-  
+
   <!-- HERO -->
   <section class="relative h-screen w-full">
     <div id="planetcont" class='animate absolute inset-0 top-1/4 overflow-hidden'>
@@ -74,6 +74,10 @@ const stack = [
         <div id="planet" class='w-full h-full bg-white dark:bg-black rounded-full p-[1px] overflow-hidden flex justify-center'>
           <div id="blur" class='w-full h-full rounded-full bg-gradient-to-b from-neutral-900/10 to-transparent to-10%'/>
         </div>
+      </div>
+      <div class="absolute bottom-0 w-full flex justify-center pb-2">
+        <a class="mouseDown" href="#about-section" title="Scroll Down"><span></span>
+        </a>      
       </div>
     </div>
     
@@ -110,7 +114,7 @@ const stack = [
     <div class="mx-auto max-w-screen-lg p-5 space-y-24 pb-16">
 
       <!-- About Section -->
-      <section class="animate">
+      <section class="animate" id="about-section">
         <article>
           <p>As a <b><i>software engineer</i></b>, my fascination with IT began through the world of Minecraft, which introduced me to Java and sparked a continuing passion for technology. This early exploration led me to discover a diverse array of technologies, languages, and frameworks, each enriching my understanding and capabilities in unique ways.</p>
           <p>With years of dedicated practice, I've specialized in the C# .NET stack and recently shifted my focus towards mastering emerging technologies like Rust and Go. These languages, I believe, are crucial for the future of software development. My commitment to innovation drives me to continually learn, experiment, and stay aligned with industry trends.</p>
