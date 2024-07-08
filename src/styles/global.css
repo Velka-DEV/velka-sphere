@@ -25,12 +25,17 @@ html {
   color-scheme: light;
   background-color: white;
   font-family: "Atkinson", sans-serif;
-  
+  --border-color: rgba(0, 0, 0, 1);
+  --border-hover-color: rgba(0, 0, 0, 0.7);
+  --background-color: #000;
 }
 
 html.dark {
   color-scheme: dark;
   background-color: black;
+  --border-color: rgba(255, 255, 255, 1);
+  --border-hover-color: rgba(255, 255, 255, 0.7);
+  --background-color: #fff;
 }
 
 html,
@@ -149,10 +154,9 @@ article img {
   @apply rotate-315;
 }
 
-
 .mouseDown {
-  font-size: 0.7em; 
-  border: 1px solid rgba(255,255,255,1);
+  font-size: 0.7em;
+  border: 1px solid var(--border-color);
   display: block;
   width: 1.7em;
   height: 2.8em;
@@ -162,18 +166,17 @@ article img {
   transition: border 0.2s ease-out;
 }
 
-.mouseDown:hover {border: 2px solid rgba(255,255,255,0.7);}
+.mouseDown:hover {
+  border: 2px solid var(--border-hover-color);
+}
 
 .mouseDown span {
   display: block;
-  background: #fff;
+  background: var(--background-color);
   width: 0.2em;
   height: 0.3em;
   margin: 0.7em auto 0;
   border-radius: 0.4em;
-}
-
-.mouseDown span {
   -webkit-animation-name: scroll;
   animation-name: scroll;
   -webkit-animation-duration: 1.5s;
